@@ -79,9 +79,6 @@
     google.charts.load('current', { 'packages': ['treemap'] });
     google.charts.setOnLoadCallback(drawChart);
 
-    $('#btn').on('click', function (event) {
-      wunderlistSDK.http.lists.all().done(createChartDataTasks);
-    });
   }
 
 
@@ -104,6 +101,7 @@
     // skip until full list is not loaded
    // if (countLists > 0) return;
 
+
     prepareDataForTreeMap();
     google.charts.setOnLoadCallback(drawChart2);
   }
@@ -120,7 +118,7 @@
       // add row to tree map
      // listForTreeMap.push(getTreeMapRow(list, list.title));
       // create UI row
-      var $li = $('<a class="list-group-item" a rel="' + list.id + '" href="#list-' + list.id + '">' + list.title + '</a>');
+      var $li = $('<li class="list-group-item"><a rel="' + list.id + '" href="#list-' + list.id + '">' + list.title + '</a></li>');
       frag.appendChild($li[0]);
     });
     $ul.html(frag);
