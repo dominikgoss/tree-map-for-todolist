@@ -111,7 +111,7 @@
   function displayLists(listData) {
   //  listForTreeMap = new Array();
 
-    var $ul = $lists.find('ul');
+    var $ul = $lists.find('div');
     var frag = document.createDocumentFragment();
 
 
@@ -120,7 +120,7 @@
       // add row to tree map
      // listForTreeMap.push(getTreeMapRow(list, list.title));
       // create UI row
-      var $li = $('<li><a rel="' + list.id + '" href="#list-' + list.id + '">' + list.title + '</a></li>');
+      var $li = $('<a class="list-group-item" a rel="' + list.id + '" href="#list-' + list.id + '">' + list.title + '</a>');
       frag.appendChild($li[0]);
     });
     $ul.html(frag);
@@ -179,13 +179,13 @@
   function displayTasks(taskData) {
     //listForTreeMap = new Array();
 
-    var $ul = $tasks.find('ul');
+    var $ul = $tasks.find('div');
     var frag = document.createDocumentFragment();
     taskData.forEach(function (task) {
       // add row to tree map
     //  listForTreeMap.push(getTreeMapRow(task, null));
       // create UI row
-      var $li = $('<li><a rel="' + task.id + '" href="#task-' + task.id + ' ">' + task.title + '</a></li>');
+      var $li = $('<a class="list-group-item" rel="' + task.id + '" href="#task-' + task.id + ' ">' + task.title + '</a>');
       frag.appendChild($li[0]);
     });
     $ul.html(frag);
