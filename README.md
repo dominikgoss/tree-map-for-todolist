@@ -11,7 +11,7 @@ Start with index.html
 # Tech stack
 - first version build on example from wunderlist.js
 
-# liblaries used
+# Libraries used
 - https://github.com/wunderlist/wunderlist.js
 - jquery
 
